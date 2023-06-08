@@ -100,12 +100,22 @@ if (!empty($_POST['btn_submit'])) {
     <?php endif; ?>
 <?php endif; ?>
 
+
+
 <?php if($pageFlag === 2) : ?>
     <?php if($_POST['csrf'] === $_SESSION['csrfToken']) :?> <!-- トークンセッション確認 -->
+
+        // DB接続
+        // DB保存
+
+
         送信が完了しました。
+
         <?php unset($_SESSION['csrfToken']); ?> <!-- 送信が完了したらトークンを削除 -->
     <?php endif; ?>
 <?php endif; ?>
+
+
 
 <?php if($pageFlag === 0) : ?>
     <?php
